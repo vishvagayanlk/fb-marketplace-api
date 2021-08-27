@@ -327,7 +327,7 @@ def browserRun(browser_dir={},choise=1):
         dir_path = browser_dir.get('chrome_dir')
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
-        browser = p.chromium.launch_persistent_context(user_data_dir='./data',headless=False,permissions=['geolocation'],geolocation={'latitude':37.8136,"longitude":144.9631})
+        browser = p.chromium.launch_persistent_context(user_data_dir='./data',headless=True,permissions=['geolocation'],geolocation={'latitude':37.8136,"longitude":144.9631})
         # else:
         #     shutil.rmtree(f'./{dir_path}')
         # browser = p.webkit.launch_persistent_context(user_data_dir=f'{dir_path}',headless=False)
